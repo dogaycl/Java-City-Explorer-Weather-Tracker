@@ -1,66 +1,36 @@
-#  Java City Management & Route Explorer  
-A modular Java application that loads structured city data from JSON, builds a graph-based model of the city, and allows route exploration, querying, and city data visualization.  
-Designed with clean OOP principles and external library integration.
+# Java City Explorer & Weather Tracker
 
----
+A robust Java Swing application that manages city data from JSON files, visualizes weather statistics through dynamic charts, and implements core software design patterns.
 
-##  Overview
+## 🚀 Key Features
+* **Dynamic Data Management:** City information is efficiently loaded from `cities.json` using the **Singleton Pattern**.
+* **Real-time Updates:** City temperatures and charts refresh automatically every 3 seconds to simulate live data tracking.
+* **Advanced Filtering:** Users can filter cities by name, population, or weather conditions (Sunny, Rainy, etc.) in real-time.
+* **Activity Planner:** Add activities (Museum, Mall, Park) to selected cities. Total costs and time are calculated using the **Decorator Pattern**.
+* **Visual Analytics:** Features a Bar Chart for temperature comparisons and a Pie Chart for weather condition distributions.
 
-This project demonstrates how to build a **city simulation / management / exploration system** using:
+## 📸 Screenshots
 
-- **Java (OOP principles)**
-- **Graph structures**
-- **JSON-based data input**
-- **Modular class architecture**
-- **External libraries (json.jar)**
+### Main Dashboard & Statistics
+The primary interface showing the city list and dynamic data visualization charts.
+![Main Screen](images/main_screen.png)
 
-The application loads `cities.json`, constructs a network of nodes (places), and optionally computes connections, paths, or interactions depending on the implemented logic.
+### Filtering & Search
+Real-time filtering based on specific weather conditions and city criteria.
+![Filtering](images/filtering.png)
 
----
+### Trip Planning & Decorators
+Activity selection interface where time and cost are dynamically calculated.
+![Activity Plan](images/activity_plan.png)
 
-##  Project Structure
+## 🛠️ Tech Stack & Design Patterns
+* **Language:** Java (Swing & AWT)
+* **Data Format:** JSON (processed via `org.json` library)
+* **Design Patterns:** Singleton, Decorator, Strategy
+* **Dependencies:** `json-20240303.jar`
 
-Java_City_Project/
-│
-
-├── src/ # All Java source files
-│ ├── Main.java # Application entry point
-│ ├── City.java # Represents a city / location
-│ ├── Node.java # Graph node model
-│ ├── Route.java # Route model (connections)
-│ ├── Graph.java # Graph structure / adjacency logic
-│ ├── ... # Additional supporting classes
-
-│
-
-├── libs/
-│ └── json.jar # External library for JSON parsing
-
-│
-
-└── cities.json # Dataset describing cities, routes, or nodes
-
-
----
-
-##  Data File: `cities.json`
-
-The project reads structured city information such as:
-
-- City names  
-- Coordinates or attributes  
-- Route details  
-- Connections between locations  
-
-Example structure (simplified):
-
-```json
-{
-  "cities": [
-    { "id": 1, "name": "Ankara", "population": 5500000 },
-    { "id": 2, "name": "Istanbul", "population": 16000000 }
-  ],
-  "routes": [
-    { "from": 1, "to": 2, "distance": 450 }
-  ]
-}
+## ⚙️ Installation & Setup
+1. Clone this repository to your local machine.
+2. Add the `libs/json-20240303.jar` file to your project's **Referenced Libraries**.
+3. Ensure `cities.json` is located in the root directory.
+4. Run `Main.java` to start the application.

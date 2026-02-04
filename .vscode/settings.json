@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "libs/json-20240303.jar",
+        "cityplanner/libs/json-20240303.jar",
+        "JavaCityProject/libs/json-20240303.jar"
+    ]
+}
